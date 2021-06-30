@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Verizon Token Generator",
   "main": "token.js",
-  "author": "SimpleAds",
-  "private": true,
+  "author": "Andre Machado",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "dotenv": "^10.0.0",
