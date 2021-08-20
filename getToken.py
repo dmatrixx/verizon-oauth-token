@@ -37,7 +37,7 @@ def get_oauth_token():
 
     payload = "grant_type=client_credentials" \
               "&scope=dsp-api-access" \
-              "&realm=aolcorporate/aolexternals" \
+              "&realm=dsp" \
               "&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer" \
               "&client_assertion=" + token
 
