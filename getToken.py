@@ -47,6 +47,13 @@ def get_oauth_token():
     }
 
     response = requests.post(token_url, data = payload, headers = headers)
+    print('-----------START-----------')
+    print('POST',response.request.url)
+    print('\r\n')
+    print(response.request.body)
+    print('\r\n')
+    print(response.request.headers)
+    print('-----------END--------------')
 
     return response.text
 
