@@ -7,6 +7,8 @@ import jwt
 token_stage_url = 'https://id-uat.b2b.verizonmedia.com/identity/oauth2/access_token'
 token_prod_url = 'https://id.b2b.verizonmedia.com/identity/oauth2/access_token'
 token_url = token_prod_url
+client_id = '8a28g22c-d2e1-4553-9998-b03bb11ddd4g'
+secret = 'rAN0vhFKKRNyLbdOQ3vuVU3xI4+dI6RCoWrLiypiiBZJc+BoOp'
 
 def get_jwt_token(client_id, secret):
     issueAt = int(time.time())
