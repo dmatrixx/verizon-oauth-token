@@ -16,10 +16,10 @@ def get_jwt_token(client_id, secret):
 
     payload = {
         'aud': token_url + "?realm=dsp",
-        'iat': issueAt,
-        'exp': expirationAt,
-        'sub': client_id,
         'iss': client_id,
+        'sub': client_id,
+        'exp': expirationAt,
+        'iat': issueAt,
         'jti': str(uuid.uuid4())
     }
 
@@ -33,7 +33,7 @@ def get_jwt_token(client_id, secret):
 
 
 def get_oauth_token():
-    token = get_jwt_token('client_id', 'client_secret')
+    token = get_jwt_token('8a28g22c-d2e1-4553-9998-b03bb11ddd4g', 'rAN0vhFKKRNyLbdOQ3vuVU3xI4+dI6RCoWrLiypiiBZJc+BoOp')
 
     payload = "grant_type=client_credentials" \
               "&scope=dsp-api-access" \
