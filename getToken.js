@@ -9,7 +9,7 @@ function generateJsonWebToken() {
     const expirationAt = issueAt + 300;
 
     const payload = {
-        "aud": process.env.TOKEN_PROD_URL + "?realm=aolcorporate/aolexternals",
+        "aud": process.env.TOKEN_PROD_URL + "?realm=dsp",
         "iat": issueAt,
         "exp": expirationAt,
         "sub": process.env.CLIENT_ID,
@@ -28,8 +28,8 @@ async function getOauthToken() {
     };
     const payload = {
         "grant_type": "client_credentials",
-        "scope": "one",
-        "realm": "aolcorporate/aolexternals",
+        "scope": "dsp-api-access",
+        "realm": "dsp",
         "client_assertion_type": "urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
         "client_assertion": generateJsonWebToken()
     };
