@@ -13,7 +13,7 @@ def get_jwt_token(client_id, secret):
     expirationAt = int(time.time()) + 300 # 5 minutes
 
     payload = {
-        'aud': token_url + "?realm=aolcorporate/aolexternals",
+        'aud': token_url + "?realm=dsp",
         'iat': issueAt,
         'exp': expirationAt,
         'sub': client_id,
